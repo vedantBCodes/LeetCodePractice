@@ -45,7 +45,7 @@ bool stringCompair(char str1[],char str2[])
         return false;
     }
 }
-bool rotateString(char str[],char goal[])
+bool rotateAndCompairingString(char str[],char goal[])
 {
     int strLength=strlen(str); 
     char *emptyString;
