@@ -21,7 +21,7 @@ The degree is 3 because the element 2 is repeated 3 times.
 So [2,2,3,1,4,2] is the shortest subarray, therefore returning 6.
 
 
- NOTE:This program won't be run on the array with more than 1 element having the highest occurance.
+     NOTE:This program won't be run on the array with more than 1 element having the highest occurance.
 e.g arr[]={1,2,2,3,1}
 */
 
