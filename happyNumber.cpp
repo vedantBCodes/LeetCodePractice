@@ -1,0 +1,77 @@
+/* Write an algorithm to determine if a number n is happy.
+
+ A happy number is a number defined by the following process:
+
+Starting with any positive integer, replace the number by the sum of the squares of its digits.
+Repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1.
+Those numbers for which this process ends in 1 are happy.
+Return true if n is a happy number, and false if not.
+
+Example 1:
+
+Input: n = 19
+Output: true
+Explanation:
+1^2 + 9^2 = 82
+8^2 + 2^2 = 68
+6^2 + 8^2 = 100
+1^2 + 0^2 + 0^2 = 1
+
+Example 2:
+
+Input: n = 2
+Output: false
+*/
+
+#include<iostream>
+using namespace std;
+ 
+int squareOfDigits(int num)
+{
+    int sum=0;
+    while(num>0)
+    {
+        int x=num%10;
+        sum=sum+(x*x);
+        num=num/10;
+    }
+    return sum;
+}
+bool checkForHappyNnumber(int num)
+{
+    int arr[100];
+    int index=0;
+    arr[index]=num;
+    index++;
+    while(num!=1)
+    {
+       num=squareOfDigits(num);
+       for(int i=0;i<index;i++)
+       {
+        if(arr[i]==num)
+        {
+            return false;
+           
+        }
+       }
+       arr[index]=num;
+       index++;
+    }
+     return true;
+}
+
+int main()
+{
+    int num;
+    cout<<"Enter a number to check whether it is a happy number or not : ";
+    cin>>num;
+    if(checkForHappyNnumber(num)==true)
+    {
+        cout<<num<<" is a happy number";
+    }
+    else
+    {
+        cout<<num<<" is not a happy number";
+    }
+   return 0;
+}
