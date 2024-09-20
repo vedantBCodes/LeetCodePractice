@@ -71,13 +71,18 @@ int diffInBinarybits(int num1, int num2)
 
 int main()
 {
-    int arr[] = {4, 14, 6};
+    int arr[] = {4, 14, 2, 4};
     int size = sizeof(arr) / sizeof(arr[0]);
+    int cnt1=0;
     for (int i = 0; i < size; i++)
     {
-        int binaryNum1 = decimalToBinary(arr[i]) for (int j = i + 1; j < size; j++)
+        int binaryNum1 = decimalToBinary(arr[i]) ;
+         for (int j = i + 1; j < size; j++)
         {
             int binaryNum2 = decimalToBinary(arr[j]);
+            int cnt2=diffInBinarybits(binaryNum1,binaryNum2);
+            cnt1=cnt1+cnt2;
         }
     }
+    cout<<"Total humming distance :"<<cnt1;
 }
