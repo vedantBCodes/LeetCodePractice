@@ -58,3 +58,8 @@ int main ()
         cout<<"The majority element is : "<<ele;
     }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 8c97bb83b4438483658a6b794fb304fa9eb398a9
